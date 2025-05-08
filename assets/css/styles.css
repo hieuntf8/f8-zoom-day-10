@@ -265,6 +265,119 @@ select {
     padding: 100px 0;
 }
 
+/* Custom checkbox */
+.custom-checkbox {
+    padding-bottom: 50px;
+    user-select: none;
+}
+
+.checkbox__heading {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.checkbox__group {
+    margin-top: 20px;
+}
+
+.checkbox,
+.radio,
+.switch {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox::before,
+.radio::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ccc;
+}
+
+.checkbox::before {
+    border-radius: 4px;
+}
+
+[type="checkbox"]:checked ~ .checkbox::before {
+    background: #009688;
+    border-color: #009688;
+}
+
+[type="checkbox"]:checked ~ .checkbox::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 10px;
+
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    rotate: 40deg;
+    border: 3px solid;
+    border-color: transparent #fff #fff transparent;
+}
+
+.radio::before {
+    border-radius: 50%;
+}
+
+[type="checkbox"]:checked ~ .radio::before {
+    background: #fff;
+    border-color: #009688;
+}
+
+[type="checkbox"]:checked ~ .radio::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 7px;
+
+    width: 16px;
+    height: 16px;
+    background: #009688;
+    border-radius: 50%;
+}
+
+.switch {
+    display: inline-flex;
+    align-items: center;
+}
+
+.switch::before {
+    content: "";
+    width: 46px;
+    height: 20px;
+    border-radius: 99px;
+    background: #939393;
+}
+
+.switch::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 3px 6px #888888;
+}
+
+[type="checkbox"]:checked ~ .switch::before {
+    background: #6dbeb7;
+}
+
+[type="checkbox"]:checked ~ .switch::after {
+    left: 46px;
+    transform: translateX(-100%);
+    background: #009688;
+}
+
+/* Main content */
+
 .main-wrapper {
     display: flex;
     gap: 30px;
