@@ -1,0 +1,275 @@
+:root {
+    --heading-font: "PT Sans", sans-serif;
+    --secondary-color: #783df0;
+    --primary-color: #b80257;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+a,
+img,
+button,
+input,
+textarea,
+select {
+    padding: 0;
+    border: none;
+    outline: none;
+    color: inherit;
+    background: transparent;
+    font-family: inherit;
+}
+
+/* Common */
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+.opacity {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Header */
+.wrapper {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+
+    height: 496px;
+    background: url(../img/banner-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 165px;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__item {
+    position: relative;
+}
+
+.navbar__link {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 4px;
+
+    color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--heading-font);
+
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    transition: background-color ease-in-out 0.4s;
+}
+
+.sub-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 220px;
+    border-radius: 4px;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease-in-out 0.7s;
+}
+
+.sub-menu li + li a {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sub-menu a {
+    display: block;
+    padding: 15px 24px;
+    color: rgba(0, 0, 0, 0.6);
+    text-transform: capitalize;
+    transition: translate color ease-in-out 0.3s;
+}
+
+.sub-menu li {
+    transition: background-color ease-in-out 0.4s;
+}
+
+.navbar__link:hover,
+.user-action i:hover,
+.sub-menu li:hover {
+    border-radius: 4px;
+
+    color: #fff;
+    background: var(--primary-color);
+}
+
+.sub-menu li:hover a {
+    translate: 10px;
+    color: #fff;
+}
+
+.navbar__item:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.user-action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.user-action i {
+    padding: 10px;
+    border-radius: 4px;
+
+    transition: background-color ease-in-out 0.4s;
+}
+
+.form {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 68px;
+}
+
+.for-search:checked ~ .form {
+    display: block;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+
+    height: 55px;
+    width: 280px;
+    padding: 5px;
+    background: #fff;
+}
+
+.form__btn {
+    height: 48px;
+    padding: 5px;
+    border: 1px solid #fff;
+    background: var(--primary-color);
+}
+
+.form__input {
+    flex: 1;
+    height: 100%;
+    padding: 0 8px;
+    border: 1px solid #ececec;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.hero {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero__heading {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.5rem;
+    font-family: var(--heading-font);
+}
+
+.breadcrumb__item + .breadcrumb__item::before {
+    content: "/";
+    margin-right: 8px;
+}
+
+.breadcrumb__link {
+    transition: color ease 0.3s;
+}
+
+.breadcrumb__item:hover .breadcrumb__link {
+    color: var(--secondary-color);
+}
+
+/* Main */
+.main {
+    padding: 100px 0;
+}
+
+.main-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    width: 270px;
+}
