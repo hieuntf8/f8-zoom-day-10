@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shop</title>
+        <title>Custom Checkbox</title>
 
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
@@ -166,7 +166,7 @@
                 </header>
 
                 <div class="hero">
-                    <h1 class="hero__heading">Shop</h1>
+                    <h1 class="hero__heading">Custom checkbox</h1>
                     <ul class="breadcrumb">
                         <li class="breadcrumb__item">
                             <a href="#!" class="breadcrumb__link">Home</a>
@@ -174,7 +174,7 @@
                         <li class="breadcrumb__item">
                             <a href="#!" class="breadcrumb__link">Pages</a>
                         </li>
-                        <li class="breadcrumb__item">Shop</li>
+                        <li class="breadcrumb__item">Custom checkbox</li>
                     </ul>
                 </div>
             </div>
@@ -183,14 +183,19 @@
         <main class="main">
             <div class="container">
                 <div class="custom-checkbox">
-                    <h2 class="checkbox__heading" style="text-decoration: underline">
-                        <a href="./custom-checkbox.html">Custom Checkbox</a>
-                    </h2>
-                </div>
-
-                <div class="main-wrapper">
-                    <div class="sidebar">Shop</div>
-                    <div class="main-content">Product</div>
+                    <h2 class="checkbox__heading">Custom Checkbox</h2>
+                    <div class="checkbox__group">
+                        <input type="checkbox" name="" id="checkbox" hidden />
+                        <label for="checkbox" class="checkbox">Checkbox</label>
+                    </div>
+                    <div class="checkbox__group">
+                        <input type="checkbox" name="" id="radio" hidden />
+                        <label for="radio" class="radio">Radio</label>
+                    </div>
+                    <div class="checkbox__group">
+                        <input type="checkbox" name="" id="switch" hidden />
+                        <label for="switch" class="switch">Switch</label>
+                    </div>
                 </div>
             </div>
         </main>
