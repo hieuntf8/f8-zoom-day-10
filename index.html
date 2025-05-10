@@ -8,6 +8,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
 
         <!-- Embed Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,10 +32,17 @@
             <div class="opacity"></div>
             <div class="container header-container">
                 <header class="header">
+                    <label for="navbar-more" class="header__more">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+
+                    <!-- Logo -->
                     <a href="/">
                         <img src="./assets/img/logo.png" alt="" class="logo" />
                     </a>
 
+                    <input type="checkbox" name="" id="navbar-more" class="navbar-more" hidden />
+                    <label for="navbar-more" class="navbar-opacity"></label>
                     <nav class="navbar">
                         <ul class="navbar__list">
                             <li class="navbar__item">
@@ -180,7 +188,7 @@
             </div>
         </div>
 
-        <main class="main">
+        <div class="main">
             <div class="container">
                 <div class="custom-checkbox">
                     <h2 class="checkbox__heading" style="text-decoration: underline">
@@ -189,10 +197,328 @@
                 </div>
 
                 <div class="main-wrapper">
-                    <div class="sidebar">Shop</div>
-                    <div class="main-content">Product</div>
+                    <div class="sidebar">
+                        <form class="sidebar-form">
+                            <input type="text" name="" id="" placeholder="Search product" class="sidebar-form__input" />
+                            <button class="sidebar-form__btn">Search</button>
+                        </form>
+
+                        <h2 class="sidebar__heading">Shop Category</h2>
+                        <ul class="menu">
+                            <li>
+                                <a href="#!">SMM Shop</a>
+                            </li>
+                            <li>
+                                <a href="#!">Network Security</a>
+                            </li>
+                            <li>
+                                <a href="#!">Programming</a>
+                            </li>
+                            <li>
+                                <a href="#!">Search Engine Opt</a>
+                            </li>
+                            <li>
+                                <a href="#!">Social Media</a>
+                            </li>
+                            <li>
+                                <a href="#!">Technology</a>
+                            </li>
+                            <li>
+                                <a href="#!">User Experience</a>
+                            </li>
+                            <li>
+                                <a href="#!">Website Analytics</a>
+                            </li>
+                        </ul>
+
+                        <h2 class="sidebar__heading">Shop Category</h2>
+                        <div class="popular-prod">
+                            <div class="popular-prod__item">
+                                <a href="#!">
+                                    <img src="./assets/img/img-popular-prod-01.jpg" alt="" class="popular-prod__img" />
+                                </a>
+                                <div class="popular-prod__info">
+                                    <h3>
+                                        <a href="#!" class="popular-prod__title">Analysis & data</a>
+                                    </h3>
+                                    <span class="popular-prod__price">$235</span>
+                                </div>
+                            </div>
+                            <div class="popular-prod__item">
+                                <a href="#!">
+                                    <img src="./assets/img/img-popular-prod-02.jpg" alt="" class="popular-prod__img" />
+                                </a>
+                                <div class="popular-prod__info">
+                                    <h3>
+                                        <a href="#!" class="popular-prod__title">Software Dev...</a>
+                                    </h3>
+                                    <span class="popular-prod__price">$35</span>
+                                </div>
+                            </div>
+                            <div class="popular-prod__item">
+                                <a href="#!">
+                                    <img src="./assets/img/img-popular-prod-03.jpg" alt="" class="popular-prod__img" />
+                                </a>
+                                <div class="popular-prod__info">
+                                    <h3>
+                                        <a href="#!" class="popular-prod__title">Marketing Plan</a>
+                                    </h3>
+                                    <span class="popular-prod__price">$75</span>
+                                </div>
+                            </div>
+                            <div class="popular-prod__item">
+                                <a href="#!">
+                                    <img src="./assets/img/img-popular-prod-04.jpg" alt="" class="popular-prod__img" />
+                                </a>
+                                <div class="popular-prod__info">
+                                    <h3>
+                                        <a href="#!" class="popular-prod__title">Google Expands</a>
+                                    </h3>
+                                    <span class="popular-prod__price">$234</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <main class="main-content">
+                        <div class="select-row">
+                            <button class="select-filter">
+                                Select Filter
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+
+                            <span class="select-result">Showing 1-9 of 25 Result</span>
+                        </div>
+
+                        <div class="products">
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-01.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Ten steps to making</a>
+                                    </h3>
+                                    <div class="product__price">$89</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-02.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Long-Tail SEO Strategy</a>
+                                    </h3>
+                                    <div class="product__price">$19</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-03.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Create optimized content</a>
+                                    </h3>
+                                    <div class="product__price">$79</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-04.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Boost Your Organic</a>
+                                    </h3>
+                                    <div class="product__price">$9</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-05.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Search Rankings</a>
+                                    </h3>
+                                    <div class="product__price">$47</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-06.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">School PPC</a>
+                                    </h3>
+                                    <div class="product__price">$36</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-07.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Guide to SEO</a>
+                                    </h3>
+                                    <div class="product__price">$19</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-08.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">Influencer Marketing</a>
+                                    </h3>
+                                    <div class="product__price">$90</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <a href="#!" class="product__img">
+                                    <img src="./assets/img/img-popular-prod-09.jpg" alt="" class="product__thumb" />
+                                </a>
+                                <div class="product__content">
+                                    <h3 class="product__title">
+                                        <a href="#!">PPC Agency</a>
+                                    </h3>
+                                    <div class="product__price">$78</div>
+                                    <a href="#!" class="product__btn">Add to cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <ul class="pagination">
+                            <li>
+                                <a href="#!" class="pagination-link">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#!" class="pagination-link">1</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="pagination-link">2</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="pagination-link">3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="pagination-link">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </main>
                 </div>
             </div>
-        </main>
+        </div>
+
+        <div class="footer">
+            <div class="container">
+                <div class="footer-inner">
+                    <div class="footer-item footer__item--large">
+                        <a href="/">
+                            <img src="./assets/img/logo.png" alt="" class="logo" />
+                        </a>
+                        <p class="footer-desc">
+                            Scholars provides universal access to the world’s best education, partnering with top
+                            universities and organizations to offer courses online.
+                        </p>
+                        <p class="copyright">© 2017 Scholrs Inc. All rights reserved.</p>
+                        <div class="footer-app">
+                            <a href="#!">
+                                <img src="./assets/img/ios.png" alt="" class="app-ios" />
+                            </a>
+                            <a href="#!">
+                                <img src="./assets/img/android.png" alt="" class="app-android" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-item">
+                        <p class="footer-heading">Scholars</p>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#!" class="footer-item-link">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Leadership</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Careers</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <p class="footer-heading">Product</p>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#!" class="footer-item-link">Education Light</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Education Starter</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Education Premium</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Business</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Business Plus</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-item footer__item--large">
+                        <p class="footer-heading">Support</p>
+                        <ul class="footer-list">
+                            <li>
+                                <a href="#!" class="footer-item-link">Support</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Toll Free Number</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Open Ticket</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">System Requirements</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="footer-item-link">Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-item footer__item--large">
+                        <p class="footer-heading">Support</p>
+                        <p class="footer-desc">Subscribe us to get all the latest news from us</p>
+                        <form class="footer-form">
+                            <input type="email" name="email" id="email" placeholder="Your Email" class="footer-input" />
+                            <button type="submit" class="footer-btn">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
